@@ -17,8 +17,8 @@ These are the instructions to clone and run this project in your local machine f
 1. First of all, Clone this repository & navigate to the directory
 
 ```
-git clone https://github.com/chiragverma11/EatEasy_Food_Ordering_Website.git
-cd EatEasy_Food_Ordering_Website
+git clone https://github.com/erswatantra2001/food-delivery-plateform.git
+cd Swigato
 ```
 
 2. Install the Dependencies
@@ -58,15 +58,3 @@ npm run menu
 ```
 
 Edit `items.csv` file under `assets/csv` to change food items.
-
-## Author
-
-[@chiragverma11](https://github.com/chiragverma11) - Designing & Developement
-
-## Built Using
-
-- [NodeJS](https://nodejs.org/en) - Server
-- [Express](https://expressjs.com/) - Server Framework
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Mongoose](https://mongoosejs.com/) - Object Modeling & Schema
-- [EJS](https://ejs.co/) - Template Engine
