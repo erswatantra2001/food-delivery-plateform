@@ -1,0 +1,175 @@
+<header class="primary-header container">
+  <nav class="primary-navigation">
+    <a class="website__name" href="/">Swigato</a>
+    <ul role="list" class="nav-list">
+      <li class="top-menu-btns"><a href="/" >Home</a></li>
+      <li class="top-menu-btns"><a href="/menu">Menu</a></li>
+    </ul>
+  <div class="icons">
+    <a href="/menu/search" class="icon-hover"><i class="fa-solid fa-magnifying-glass icon"></i></a>
+    <% if(user){ %>
+      <div class="profile">
+        <div id="profileBtn" class="icon-hover"
+          ><i class="fa-solid fa-user icon"></i
+        ></div>
+        <div class="profile__menu">
+          <ul role="list" class="menu__list">
+            <li><a href="#"><%= user.name %></a></li>
+            <li><a href="/orders">Orders</a></li>
+            <li><a href="/user/logout">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="/cart" class="cart icon-hover"
+        ><i class="fa-solid fa-cart-shopping icon"></i>
+        <% if(cart) {%>
+          <span class="cart__count" id="cartCount"> <%= cart.items.length %> </span>
+        <% }else{ %>
+          <span class="cart__count" id="cartCount">0</span>
+          <% } %>
+      </a>
+    <% } else{%>
+    <a href="/user/login" class="login__btn">Login</a>
+    <% } %>
+  </div>
+</nav>
+</header>
+<main>
+  <section class="container">
+    <div class="even-columns hero-space">
+      <div class="main__content">
+        <div class="content">
+          <div class="text-content">
+            <h2 class="main__tagline">Delight in every bite, brought to you!</h2>
+          </div>
+          <div class="image-content">
+            <img src="/img/main2.png" class="hero-image" alt="thali" />
+          </div>
+        </div>
+        <div class="order_now_button_home">
+          <button class="order-now">Order Now</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="/img/Pudina 1.webp" class="pudina1" alt="Pudina" />
+        <img src="/img/Pudina 2.webp" class="pudina2" alt="Pudina" />
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container category-wrapper">
+      <div class="even-rows">
+        <div class="menu">
+          <h2 class="menu-title">Our Menu</h2>
+          <a href="/menu" class="see-all">See All</a>
+        </div>
+        <div class="category-grid items">
+          <a href="#" class="category-items">
+            <img src="/img/Pizza.webp" class="category-img" alt="Pizza" />
+            <h3>Pizza</h3> </a
+          ><a href="#" class="category-items">
+            <img src="/img/Burger.webp" class="category-img" alt="Burger" />
+            <h3>Burger</h3> </a
+          ><a href="#" class="category-items">
+            <img src="/img/Combo.webp" class="category-img combo" alt="Combo" />
+            <h3>Combo</h3> </a
+          ><a href="#" class="category-items">
+            <img src="/img/Fries.webp" class="category-img fries" alt="Fries" />
+            <h3>Fries</h3> </a
+          ><a href="#" class="category-items">
+            <img src="/img/Drinks.webp" class="category-img" alt="Drinks" />
+            <h3>Drinks</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container section-third">
+      <div class="order-cta2">
+        <div class="img-wrapper">
+          <img class="secondary-image" src="/img/sweets-vector.png" alt="sweets" />
+        </div>
+
+        <div class="cta">
+          <h2 class="cta-title">
+            Eat well without setting foot outside your doorstep!
+          </h2>
+          <p class="cta-tagline">
+            Tasty food in your hands in minutes.
+          </p>
+          <form action="#" class="city__form">
+            <input type="text" placeholder="Enter your City" />
+            <button type="submit" class="find-food">
+              Find Food
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="contact-flex container">
+      <div class="write-us">
+        <div class="write-bg"></div>
+        <form action="#" class="form-wrapper">
+          <h3 class="write-title">Write to Us</h3>
+          <input type="text" placeholder="Enter your Name" class="input-write"/>
+          <input type="email" placeholder="Enter your Email" class="input-write"/>
+          <textarea
+            name="message"
+            id="message"
+            cols="20"
+            rows="2"
+            placeholder="Your Message"
+          ></textarea>
+          <button type="submit" class="button square-button2">Submit</button>
+        </form>
+      </div>
+      <div class="contactus">
+        <img src="/img/Pudina 1.webp" class="vegies" alt="Vegies" />
+        <h3 class="contactus-title">Contact Us</h3>
+        <ul role="list" class="contact-details">
+          <li>
+            <!-- <img class="email__icon" src="/img/email.webp" alt="email icon" /> -->
+            <i class="fa-solid fa-envelope"></i>
+            <a
+              class="details"
+              href="mailto:swigato@gmail.com"
+              target="_blank"
+              >swigato@gmail.com</a
+            >
+          </li>
+          <li>
+            <!-- <img class="call__icon" src="/img/call.webp" alt="call icon" /> -->
+            <i class="fa-solid fa-phone"></i>
+            <a class="details" href="tel:+917404250103" target="_self"
+              >+91 7000464589</a
+            >
+          </li>
+          <li>
+            <!-- <img class="location__icon" src="/img/location.webp" alt="location icon" /> -->
+            <!-- <i class="fa-solid fa-location-dot"></i> -->
+            <i class="fa-solid fa-globe"></i>
+            <a
+              class="details"
+              href="https://maps.google.com/maps?q=gurugram"
+              target="_blank"
+              >Sector 28, Gurgaon, India</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="primary__footer">
+  <div class="copyright-box">
+    <p class="copyright-text">Copyright @Swigato 2024 | Design by <a class="footer__cta github" target="_blank" >Team</a></p>
+    <!-- <p class="copyright-text">Created By Chirag | All Rights Reserved!</p> -->
+  </div>
+</footer>
+
+<!-- Scrips -->
+<script src="/js/index.js"></script>
