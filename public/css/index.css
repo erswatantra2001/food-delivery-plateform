@@ -363,6 +363,7 @@ html::-webkit-scrollbar-thumb {
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 80px;
+  text-decoration: none;
 }
 
 .order-now:hover {
